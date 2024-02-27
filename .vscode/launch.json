@@ -1,0 +1,35 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "opt",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/opt/opt.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-c",
+                "opt/configs/syn.json",
+                "-t",
+                "ckpt/Bike",
+                "data/Synthetic_NSVF/Bike"
+            ]
+        },
+        {
+            "name": "render_imgs",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/opt/render_imgs.py",
+            "console": "integratedTerminal",
+            "args": [
+                "ckpt/Bike/ckpt.npz",
+                "data/Synthetic_NSVF/Bike"
+            ]
+        },
+    ]
+}
